@@ -3,10 +3,7 @@
 @section('title', 'Form Lamaran Kerja')
 
 @section('form')
-<div class="content-wrapper">
-            <!-- Content -->
-
-            <div class="container-xxl flex-grow-1 container-p-y">
+<div class="container-xxl flex-grow-1 container-p-y">
               <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Forms/</span> Horizontal Layouts</h4>
 
               <!-- Basic Layout & Basic with Icons -->
@@ -21,32 +18,27 @@
                     <div class="card-body">
                       <form>
                         <div class="row mb-3">
-                        <label for="inputKota" class="form-label">1. Kota</label> 
+                        <label for="inputKota" class="form-label">1. Kota</label>    
                           <div class="col-sm-10">
                           <input type="text" id="inputKota" class="form-control form-step" data-step="1" placeholder="Contoh: Jakarta" required>
                           </div>
                         </div>
                         <div class="row mb-3">
                         <label for="inputTanggal" class="form-label">2. Tanggal</label>
-                               
                           <div class="col-sm-10">
                           <input type="date" id="inputTanggal" class="form-control form-step" data-step="2" required>
                           </div>
                         </div>
                         <div class="row mb-3">
                         <label for="inputSubjek" class="form-label">3. Subjek Surat</label>
-                                
                           <div class="col-sm-10">
                             <div class="input-group input-group-merge">
                             <input type="text" id="inputSubjek" class="form-control form-step" data-step="3" placeholder="Contoh: Lamaran Pekerjaan - Posisi Marketing" required>
-                              
                             </div>
-                            <div class="form-text"></div>
                           </div>
                         </div>
                         <div class="row mb-3">
                         <label for="inputAlamatPenerima" class="form-label">4. Alamat Penerima</label>
-                       
                           <div class="col-sm-10">
                           <textarea id="inputAlamatPenerima" class="form-control form-step" data-step="4" rows="4" placeholder="Kepada:
 HRD Manager
@@ -58,30 +50,40 @@ Jl. Alamat Perusahaan No. 123" required></textarea>
                         <label for="inputPembuka" class="form-label">5. Paragraf Pembuka</label>
                           <div class="col-sm-10">
                           <textarea id="inputPembuka" class="form-control form-step" data-step="5" rows="4" placeholder="Dengan hormat,
-Melalui surat ini, saya ingin..." required></textarea>
+                          Melalui surat ini, saya ingin..." required></textarea>
                           </div>
                         </div>
+
                         <div class="row mb-3">
-                        <label for="inputIsi" class="form-label">6. Paragraf Isi (Opsional)</label>  
+                        <label for="inputIsi" class="form-label">6. Paragraf Isi (Opsional)</label>
                           <div class="col-sm-10">
-                          <textarea id="inputIsi" class="form-control form-step" data-step="6" rows="4" placeholder="Saya memiliki pengalaman dalam..."></textarea>
+                            <div class="input-group input-group-merge">
+                            <textarea id="inputIsi" class="form-control form-step" data-step="6" rows="4" placeholder="Saya memiliki pengalaman dalam..."></textarea>
+                            </div>
                           </div>
                         </div>
+
                         <div class="row mb-3">
                         <label for="inputPenutup" class="form-label">7. Paragraf Penutup</label>
                           <div class="col-sm-10">
-                          <textarea id="inputPenutup" class="form-control form-step" data-step="7" rows="4" placeholder="Demikian surat lamaran ini saya buat..." required></textarea>
+                            <div class="input-group input-group-merge">
+                            <textarea id="inputPenutup" class="form-control form-step" data-step="7" rows="4" placeholder="Demikian surat lamaran ini saya buat..." required></textarea>
+                            </div>
+                          </div>
                         </div>
-                        </div>
+
                         <div class="row mb-3">
                         <label for="inputPengirim" class="form-label">8. Nama Pengirim</label>
                           <div class="col-sm-10">
-                          <input type="text" id="inputPengirim" class="form-control form-step" data-step="8" placeholder="Nama Lengkap Anda" required>
+                            <div class="input-group input-group-merge">
+                            <input type="text" id="inputPengirim" class="form-control form-step" data-step="8" placeholder="Nama Lengkap Anda" required>
+                            </div>
                           </div>
                         </div>
-                        <div class="row justify-content-end">
-                          <div class="col-sm-10">
-                          <button type="button" id="btnClear" class="btn btn-secondary">
+                        
+                        <div class="col-12 mt-4">
+                                <div class="d-flex gap-2">
+                                    <button type="button" id="btnClear" class="btn btn-secondary">
                                         <i class="iconly-Delete icli"></i> Clear Form
                                     </button>
                                     <button type="button" id="btnDone" class="btn btn-primary" disabled>
@@ -90,24 +92,26 @@ Melalui surat ini, saya ingin..." required></textarea>
                                     <button type="button" id="btnPrint" class="btn btn-success" disabled>
                                         <i class="iconly-Printer icli"></i> Cetak Surat
                                     </button>
-                          </div>
-                        </div>
+                                </div>
+                            </div>
                       </form>
                     </div>
                   </div>
                 </div>
-
-
-
-
-
                 <!-- Basic with Icons -->
-                <!-- Preview Panel -->
-           <div class="col-xl-6">
+                <div class="col-xl-6">
+                  <div class="card mb-2">
+                    <div class="card-header d-flex align-items-center justify-content-between">
+                      <h5 class="mb-0"></h5>
+                      <small class="text-muted float-end"></small>
+                    </div>
+                    <div class="card-body">
+                      <form>
+                      <div class="">
                 <div class="card">
                     <div class="card-header card-no-border pb-0">
                         <h3>Preview Surat</h3>
-                        <p class="mt-1 mb-0">Preview surat akan muncul secara real-time</p>
+                        <p class="mt-1 mb-0"></p>
                     </div>
                     <div class="card-body p-0">
                         <div class="preview-panel">
@@ -125,7 +129,7 @@ Melalui surat ini, saya ingin..." required></textarea>
 
                                 <!-- Subjek Surat -->
                                 <div class="letter-subject">
-                                    <strong>Hal: </strong><span id="prevSubjek"><span class="empty-placeholder">[Subjek Surat]</span></span>
+                                    <strong>Subjek: </strong><span id="prevSubjek"><span class="empty-placeholder">[Subjek Surat]</span></span>
                                 </div>
 
                                 <!-- Alamat Penerima -->
@@ -171,19 +175,14 @@ Melalui surat ini, saya ingin..." required></textarea>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-<!-- Toast Notification -->
-<div id="toast" class="toast">
-    <div class="d-flex align-items-center">
-        <i class="iconly-Check icli text-white me-2"></i>
-        <span>Surat Lamaran Berhasil Digenerate!</span>
-    </div>
-</div>
-
-<style>
+    <style>
     /* CSS untuk Preview Surat */
     .preview-panel {
         background-color: #525659;
@@ -575,9 +574,5 @@ Melalui surat ini, saya ingin..." required></textarea>
         updatePreview();
     });
 </script>
-              </div>
-            </div>
-            <!-- / Content -->
-            <div class="content-backdrop fade"></div>
-          </div>
+
 @endsection
